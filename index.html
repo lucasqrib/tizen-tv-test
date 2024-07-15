@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.min.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+    <style>
+        .video-js .vjs-ad-playing .vjs-progress-control {
+            pointer-events: none;
+        }
+
+        #adUI {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <video-js id="myPlayer" class="vjs-default-skin" controls width='720' height='405'>
+    </video-js>
+    <script>
+
+        var player = videojs('myPlayer');
+
+        player.src({
+            type: 'video/mp4',
+            src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        });
+
+
+        player.play().then(function () {
+            console.info('play');
+        }).catch(function (e) {
+            console.error(e);
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets"
+    id="http://yourdomain/TizenTesting" version="1.0.0" viewmodes="maximized">
+    <access origin="*" subdomains="true"></access>
+    <access origin="https://cdnjs.cloudflare.com" subdomains="true"></access>
+    <access origin="https://ajax.googleapis.com" subdomains="true"></access>
+    <access origin="https://commondatastorage.googleapis.com" subdomains="true"></access>
+    <access
+        origin="https://commondatastorage.googleapis.com" subdomains="true"></access>
+    <access
+        origin="https://pubads.g.doubleclick.net" subdomains="true"></access>
+    <tizen:application
+        id="7Z7LHmjQNs.TizenTesting" package="7Z7LHmjQNs" required_version="2.3" />
+    <!-- <tizen:content-security-policy>*</tizen:content-security-policy> -->
+    <tizen:content-security-policy>
+        default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob: filesystem:;
+        script-src * 'self' 'unsafe-inline' 'unsafe-eval' blob:;
+        worker-src * 'self' blob:;
+        connect-src * 'self' 'unsafe-inline';
+        img-src * 'self' data: blob: 'unsafe-inline';
+        frame-src *;
+        style-src * 'self' 'unsafe-inline';
+        font-src * 'self' data:;
+        media-src * 'self' data: blob:;
+    </tizen:content-security-policy>
+    <content
+        src="index.html" />
+    <feature name="http://tizen.org/feature/screen.size.normal.1080.1920" />
+    <icon
+        src="icon.png" />
+    <name>TizenTesting</name>
+    <tizen:profile name="tv-samsung" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/filesystem.read" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/filesystem.write" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/content.read" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/content.write" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/application.launch" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/internet" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/system" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/setting" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/tv.display" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/tv.audio" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/tv.inputdevice" />
+    <tizen:privilege
+        name="http://tizen.org/privilege/tv.window" />
+    <tizen:privilege
+        name="http://developer.samsung.com/privilege/avplay" />
+    <tizen:privilege
+        name="http://developer.samsung.com/privilege/adinfo" />
+    <tizen:privilege
+        name="http://developer.samsung.com/privilege/productinfo" />
+    <tizen:privilege
+        name="http://developer.samsung.com/privilege/network.public" />
+    <tizen:privilege
+        name="http://developer.samsung.com/privilege/hostedapp_deviceapi_allow" />
+    <tizen:privilege
+        name="http://developer.samsung.com/privilege/network.public" />
+    <tizen:privilege name="http://developer.samsung.com/privilege/tvinfo" />
+    <tizen:privilege name="http://tizen.org/privilege/mediacapture" />
+    <tizen:setting
+        screen-orientation="landscape" context-menu="enable" background-support="disable"
+        encryption="disable" install-location="auto" hwkey-event="enable" />
+</widget>
